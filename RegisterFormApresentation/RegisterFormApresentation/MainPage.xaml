@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                   x:Class="RegisterFormApresentation.MainPage" BackgroundColor="LightBlue">
+    <StackLayout VerticalOptions="CenterAndExpand" Padding="5">
+        <Label Text="Formulário de Cadastro" HorizontalTextAlignment="Center" FontSize="Large" Margin="10"></Label>
+        
+        <Entry Placeholder="Nome" Text="{Binding Name}"></Entry>
+        <Entry Placeholder="Sobrenome" Text="{Binding Surname}" ></Entry>
+
+        <Entry Placeholder="CPF" Text="{Binding Document}"></Entry>
+        <Entry Placeholder="Email" Text="{Binding Email}"></Entry>
+
+        <Label Text="Data de Nascimento"></Label>
+        <DatePicker Date="{Binding Birthday, Mode=TwoWay}"></DatePicker>
+
+        <Entry Placeholder="Endereço" Text="{Binding Address}" ></Entry>
+
+        <Entry Placeholder="Senha" Text="{Binding Password}" IsPassword="True"></Entry>
+        <Entry Placeholder="Confirmar Senha" Text="{Binding ConfirmPassword}" IsPassword="True"></Entry>
+
+        <Button Text="Cadastrar" Clicked="OnSave" />
+    </StackLayout>
+</ContentPage>
